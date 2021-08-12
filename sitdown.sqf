@@ -1,5 +1,5 @@
 // Author: shinySonic
-// Credits: MacRae
+// Credits: MacRae; Regimental Combat Team 7
 
 _chair = _this select 0; 
 _unit = _this select 1; 
