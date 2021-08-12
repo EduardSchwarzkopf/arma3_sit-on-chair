@@ -23,4 +23,5 @@ if (isServer) then {
 ```
 
 ## Credits
-MacRae
+MacRae  
+Regimental Combat Team 7
