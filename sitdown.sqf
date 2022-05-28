@@ -11,9 +11,10 @@ _anim = [_animBaseName,_animType,"_idle", _animNum] joinString "";
  
 _noOffset = ["HubSittingChairB_idle2"];
 [_unit,_anim] remoteexec ['switchMove'];
-  
-_unit setPosASL (_chair modelToWorld [0, -0.1, 0]);  
+sleep 0.1;
+
 _unit setDir ((getDir _chair) - 180);  
+_unit setPosASL (_chair modelToWorldWorld [0, -0.1, -1]);  
 
 
 _action = _unit addaction ["Stand Up",
