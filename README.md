@@ -9,16 +9,14 @@ On a single Chair:
 
 for all placed chairs place this in your `init.sqf`:
 ```
-if (isServer) then {
-  _chairs = ["Land_CampingChair_V1_F", "Land_CampingChair_V2_F"];
+_chairList = ["Land_CampingChair_V1_F", "Land_CampingChair_V2_F"];
 
-  {
-    if (typeOf _x in _chairs) then {
-      _x addAction ["Sit Down","scripts\sitdown.sqf"];
+_missionObjects = allMissionObjects "";
+for "_i" from 0 to count _missionObjects -1 do { 
+    private _chair = _missionObjects select _i;
+    if (typeOf _chair in _chairList) then {
+        _chair addAction ["Sit Down","scripts\sitdown.sqf"];
     };
-
-  } forEach (allMissionObjects "");
-
 };
 ```
 
